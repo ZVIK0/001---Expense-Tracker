@@ -3,6 +3,8 @@ expenses = []
 def whatis_yourname():
     username = input("Please input name ? - ")
     return username
+def quit_program(username):
+    print("Goodbye " + username + " Have an expense free day")
 
 def add_expenses():
     global expenses 
@@ -36,6 +38,16 @@ def total_spent():
     for i in range(len(expenses)):
         total = total + expenses[i]["amount"]
     return "R" + str(total)
+
+def most_expended_items():
+    global expenses 
+    for i in range(len(expenses)):
+        count = 0
+        for j in range(len(expenses)):
+            if expenses[i] == expenses[j]:
+                count += 1
+    print("Most expended item is " + expenses[i]["name"] + " you added it " + str(count) + " times")
+    return count 
 
 username = whatis_yourname()
 
