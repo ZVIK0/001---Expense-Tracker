@@ -50,13 +50,17 @@ def most_expended_items():
     return count 
 
 username = whatis_yourname()
+print()
 
 while True:
     print(  str(username) + "'s" + " Expense Tracker ")
-    print("\n 1. Add Expense")
-    print("\n 2. Remove Expense")
-    print("\n 3. View My Expenses")
-    print("\n 4. See Total Spent")
+    print()
+    print(" 1. Add Expense")
+    print(" 2. Remove Expense")
+    print(" 3. View My Expenses")
+    print(" 4. See Total Spent")
+    print("5. Most expensed item")
+    print("6. Quit tracking")
     print("\n")
 
     choice = int(input("Enter Your Choice "))
@@ -69,5 +73,9 @@ while True:
         view_expenses()
     elif choice == 4:
         print(total_spent())
+    elif choice == 5:
+        most_expended_items()
+    elif choice == 6:
+        quit_program()
     else:
         print("Invalid Option, Please Try Again")
